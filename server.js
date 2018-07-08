@@ -1,5 +1,4 @@
 var conString = "mongodb://anumeha:systers2018@ds217131.mlab.com:17131/demo-inviter";
-
 var express = require("express");
 var app = express();
 var port = 3000;
@@ -14,7 +13,7 @@ mongoose.Promise = global.Promise;
 });
  var nameSchema = new mongoose.Schema({
     name: String,
-    email: String
+    created:  {type: Date, default: Date.now},
 });
 var User = mongoose.model("User", nameSchema);
 
