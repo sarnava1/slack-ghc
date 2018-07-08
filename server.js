@@ -48,9 +48,11 @@ app.post("/addname", (req, res) => {
       };
 
       transporter.sendMail(mailOptions, (error, info) => {
+
           if (!error) {
               res.render("index");
             }
+
           });
 
 });
