@@ -1,44 +1,69 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>GHC 2018</title>
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-  </head>
+<head>
+  <title>GHC 2018</title>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
 
-  <body class="bg">
-    <h1><center>GHC 2018</center></h1>
-    <div class="container">
+<body class="bg">
+  <h1><center>GHC 2018</center></h1>
+  <div class="container">
     <div class="row">
       <div class="col s7 offset-s3">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <p>Are you excited about GHC 18? We know you want to engage before GHC, so we created the GHC 18 Slack. Join to collaborate on travel, stay abreast of updates, and connect with others before, during and after GHC.Please enter the email address you want our Community to use to send you an invitation to our GHC community.</p>
-        </div>
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <p>Are you excited about GHC 18? We know you want to engage before GHC, so we created the GHC 18 Slack. Join to collaborate on travel, stay abreast of updates, and connect with others before, during and after GHC.Please enter the email address you want our Community to use to send you an invitation to our GHC community.</p>
+          </div>
 
-      </div>
+        </div>
       </div>
     </div>
     
     <form method="post" action="/addname">
       <label>Enter Your email ID</label><br>
       <input type="text" name="name" placeholder="Enter email ID" required style="color: white;">
-      <div class="g-recaptcha" data-sitekey="6LcE6mIUAAAAAJtNhVBc-2AIWl69s6GZ383ZBx2r"></div>
-      <button type="submit" value="Add Name"> Submit </button>
+      <div class="g-recaptcha" data-sitekey="6LcE6mIUAAAAAJtNhVBc-2AIWl69s6GZ383ZBx2r" id="rcaptcha" data-callback="enableBtn"></div>
+      <span id="captcha" style="color:red" /></span>
+      
+      <div>
+        <input type="checkbox" id="scales" name="feature"
+               value="scales" />
+        <label for="scales">I agree to the terms and conditions.</label>
+      </div>
+      <button type="submit" value="Add Name" id="sub1"> Submit </button>
 
 
     </form>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    </div>
-  </body>
+    <script>
+      var checker = document.getElementById('scales');
+      var sendbtn = document.getElementById('sub1');
+      checker.onchange = function(){
+      if(this.checked){
+          sendbtn.disabled = false;
+      } else {
+          sendbtn.disabled = true;
+      }
+
+      }
+      document.getElementById("sub1").disabled = true;
+      function enableBtn(){
+        document.getElementById("sub1").disabled = false;
+      }
+
+
+   </script>
+ </div>
+</body>
 </html>
 <style type="text/css">
 
   body{
-      height: 100%;
+    height: 100%;
   }
   .bg{
     background-image: url(https://images.unsplash.com/photo-1460602594182-8568137446ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c6a89cf0d31c8ed23b35aaf9a119a9f5&auto=format&fit=crop&w=500&q=60);
@@ -52,8 +77,8 @@
     background-size: cover;
   }
   h1{
-  color: white;
-  font-family: 'Titillium Web', sans-serif;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
   }
 
 </style>
