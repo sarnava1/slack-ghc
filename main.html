@@ -38,6 +38,7 @@
 
 
     </form>
+    
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script>
       var checker = document.getElementById('scales');
@@ -55,6 +56,14 @@
 
    </script>
  </div>
+ <footer class="page-footer blue-grey">
+    <div class="footer-copyright">
+      <div class="container">
+      © Systers, an Anita Borg Institute Community
+ 
+      </div>
+    </div>
+ </footer>
 </body>
 </html>
 <style type="text/css">
@@ -76,6 +85,19 @@
   h1{
     color: white;
     font-family: 'Titillium Web', sans-serif;
+  }
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .div{
+    margin: 15px;
   }
 
 </style>
