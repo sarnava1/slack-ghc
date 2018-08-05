@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-var nodeMailer = require('nodemailer');
+var nodeMailer = require("nodemailer");
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
  mongoose.connect(conString,  () => {
@@ -25,8 +25,10 @@ app.post("/addname", (req, res) => {
     var myData = new User(req.body);
     myData.save()
         .then(item => {
+
             res.sendFile(__dirname + "/response.html");
         })
+
         .catch(err => {
             res.status(400).send("Unable to save to database");
         });
@@ -48,12 +50,14 @@ app.post("/addname", (req, res) => {
       };
 
       transporter.sendMail(mailOptions, (error, info) => {
+
           if (error) {
               return console.log(error);
           }
           console.log('Message %s sent: %s', info.messageId, info.response);
               res.render('index');
 });
+
 
 });
 
