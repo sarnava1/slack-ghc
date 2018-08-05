@@ -1,7 +1,7 @@
 var conString = "mongodb://anumeha:systers2018@ds217131.mlab.com:17131/demo-inviter";
 var express = require("express");
 var app = express();
-var port = 3000;
+const PORT = process.env.PORT || 5000
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,12 +35,12 @@ app.post("/addname", (req, res) => {
           port: 465,
           secure: true,
           auth: {
-              user: "anumehaagrawal29@gmail.com",
-              pass: "An3vA1sT4"
+              user: "communitystaff@anitab.org",
+              pass: ""
           }
       });
       let mailOptions = {
-          from: "<anumehaagrawal29@gmail.com>", // sender address
+          from: "<communitystaff@anitab.org>", // sender address
           to: req.body.name, // list of receivers
           subject: "Join the GHC slack channel !", // Subject line
           text: "Hell", // plain text body
@@ -57,6 +57,6 @@ app.post("/addname", (req, res) => {
 
 });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     
 });
