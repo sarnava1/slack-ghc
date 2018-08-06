@@ -1,8 +1,8 @@
 var conString = "mongodb://anumeha:systers2018@ds217131.mlab.com:17131/demo-inviter";
 var express = require("express");
 var app = express();
-const PORT = process.env.PORT || 5000
-var bodyParser = require('body-parser');
+const PORT = process.env.PORT || 5000;
+var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 var nodeMailer = require("nodemailer");
@@ -54,8 +54,8 @@ app.post("/addname", (req, res) => {
           if (error) {
               return console.log(error);
           }
-          console.log('Message %s sent: %s', info.messageId, info.response);
-              res.render('index');
+         
+              res.render("index");
 });
 
 
