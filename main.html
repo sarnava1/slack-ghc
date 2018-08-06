@@ -24,23 +24,51 @@
     </div>
     
     <form method="post" action="/addname">
-      <label>Enter Your email ID</label><br>
       <input type="text" name="name" placeholder="Enter email ID" required style="color: white;">
+      <div style="margin: 15px;"></div>
       <div class="g-recaptcha" data-sitekey="6LcE6mIUAAAAAJtNhVBc-2AIWl69s6GZ383ZBx2r" id="rcaptcha" data-callback="enableBtn"></div>
       <span id="captcha" style="color:red" /></span>
+      <div style="margin: 15px;"></div>
       
       <div>
         <input type="checkbox" id="scales" name="feature"
                value="scales" />
         <label for="scales">I agree to the terms and conditions.</label>
+        <div style="margin: 15px;"></div>
+         <div class="responsive-table table-status-sheet">
+          <table class="bordered">
+           
+            <tbody>
+              <tr>
+                <td>
+               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."                
+              </td>                 
+              </tr>
+              <tr>
+                <td>
+               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."                
+              </td>                 
+              </tr>
+              <tr>
+              
+                <td>
+               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."                
+              </td>                 
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div style="margin: 15px;"></div>
       </div>
+      <div style="margin: 20px;"></div>
       <button type="submit" value="Add Name" id="sub1"> Submit </button>
 
 
     </form>
 
     <div>
-      <p style="color: white; margin: 10px;">In case of issues in recieving the invite please contact :-<a href="http://communityhelp.anitab.org/portal"> Portal </a> </p>
+      <p style="color: white; margin: 17px;">In case of issues in recieving the invite please contact :-<a href="http://communityhelp.anitab.org/portal"> Portal </a> </p>
     </div>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -101,6 +129,25 @@
 
   .div{
     margin: 15px;
+  }
+  tbody {
+  display:block;
+  height:150px;
+  overflow:auto;
+  }
+  td{
+    color: white;
+  }
+  thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+  }
+  thead {
+  width: calc( 100% - 1em )
+  }
+  table {
+  width:100%;
   }
 
 </style>
