@@ -3,4 +3,4 @@
 ### Install node on your system
 #### Clone the repository and `npm install`
 #### To run the server - `node server.js`
-#### Open a browser and type localhost:3000
+#### Open a browser and type localhost:5000
