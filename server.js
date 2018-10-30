@@ -21,6 +21,8 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/main.html')
 })
 
+app.use(express.static('public'))
+
 app.post('/addname', (req, res) => {
   var myData = new User(req.body)
   myData.save()
