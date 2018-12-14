@@ -8,9 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 var nodeMailer = require('nodemailer')
 var mongoose = require('mongoose')
 mongoose.Promise = global.Promise
-mongoose.connect(conString, () => {
-
-})
+mongoose.connect(conString, { useNewUrlParser: true })
 var nameSchema = new mongoose.Schema({
   name: String,
   created: { type: Date, default: Date.now }
