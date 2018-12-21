@@ -10,6 +10,6 @@ Run `./node_modules/.bin/eslint yourfile.js` to see linting errors in your javas
 
 Run `./node_modules/.bin/eslint yourfile.js --fix` to fix linting errors in your javascript file.
 
-Edit the .eslintrc.js file to add any exceptions to the dafault linting rules.
+Edit the .eslintrc.js file to add any exceptions to the default linting rules.
 
 **It is very important to lint all your javascript files before making a PR or else Codacy won't approve the PR!**
